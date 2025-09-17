@@ -9,7 +9,7 @@ Il professore crea un pool di esercizi da cui pescare per creare l’esame in qu
 Il sistema genera una bozza dell’esame ma il professore può comunque modificarla manualmente.
 Il pool così come la lista dei compiti è memorizzata sul server.
 Il tool genera un file pdf con un numero di compiti predefinito. Il professore può scegliere se mescolare le risposte delle domande a
-risposta multipla e se mescolare l’ordine delle domande#
+risposta multipla e se mescolare l’ordine delle domande
 ## Requisiti minimi:
 - Una Docker per il lato server
 
