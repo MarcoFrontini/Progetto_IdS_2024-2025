@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor Esami</title>
+  <link rel="stylesheet" href="../../css/examEditorPage.css" />
+  <script defer src="../../js/examEditor.js"></script>
+</head>
+
+<body onload="tryGetData()">
+  <h2>Editor Esame</h2>
+  <div class="exam-header"><button class="button-header" type="submit" onclick="saveExam()">Salva</button><button class="button-header" type="submit"
+      onclick="cancel()">Annulla</button></div>
+  <div class="sections-container">
+  <div class="exam-container" id="exam-container">
+      <input class="exam-title" id="exam-title" type="text" placeholder="Nome Esame" value="Nome Esame"></input>
+      <div class="section-buttons-options html-only"><button class="option-button" type="submit" onclick="addSection()">Aggiungi
+          Sezione</button></div>
+      <ul class="section-list" id="section-list">
+      </ul>
+    </div>
+    </li>
+    </ul>
+  </div>
+
+  <!--  SEPARATOR -->
+
+  <div class="exercise-visualizer-container" id="exercise-visualizer-container">
+    <h3>Lista Esercizi</h3>
+
+    <div class="button-container">
+      <button type="submit" class="option-button" onclick="closeListContainer()">Annulla</button>
+    </div>
+    <br>
+    <div class="exercise-list-container">
+      <div class="card">
+        <table class="exercise-list-table" id="exercise-list-table">
+          <tr>
+            <th class="hidden-row">ID</th>
+            <th>Domanda</th>
+            <th>Tipo Esercizio</th>
+            <th>Punteggio</th>
+            <th>Azioni</th>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <br>
+    <div class="popup-exer-visualizer" id="popup-exer-visualizer">
+      <h3>Visualizzazione Esercizio</h3>
+
+      <div class="exercise-visualizer-container-single" id="exercise-visualizer-container-single">
+        <table class="exercise-data-container" id="exercise-single-visualizer-table">
+          <tr>
+            <th class="hidden-row">ID</th>
+            <th>Domanda</th>
+            <th>Tipo esecizio</th>
+            <th>Punteggio</th>
+          </tr>
+          <tr>
+            <td class="ex-uuid_S hidden-row" id="ex-uuid_S">ExS_1</td>
+            <td class="ex-type-s"> Tipo</td>
+            <td class="ex-question-s">Ipotetica doomanda dell'esercizio</td>
+            <td class="ex-points-s">3</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="exercise-visualizer-container-multiple" id="exercise-visualizer-container-multiple">
+        <table class="exercise-data-container" id="exercise-multiple-visualizer-table">
+          <tr>
+            <th class="hidden-row">ID</th>
+            <th>Domanda</th>
+            <th>Tipo esecizio</th>
+            <th>Punteggio</th>
+            <th>Risposta 1</th>
+            <th>Risposta 2</th>
+            <th>Risposta 3</th>
+            <th>Risposta 4</th>
+          </tr>
+          <tr>
+            <td class="ex-uuid_M hidden-row" id="ex-uuid_M">ExM_1</td>
+            <td>Risposta Multipla</td>
+            <td>Ipotetica doomanda dell'esercizio</td>
+            <td>5</td>
+            <td>Ris 1</td>
+            <td>Ris 2</td>
+            <td>Ris 3</td>
+            <td>Ris 4</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="popup-button-container" id="visualizer-options">
+
+        <!-- Button here -->
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

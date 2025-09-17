@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+}
+
+h2 {
+    margin: 20px 0;
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.option-button {
+    background-color: rgb(76, 98, 107);
+    color: aliceblue;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition-duration: 0.5s;
+    margin-bottom: 20px;
+}
+
+.option-button:active {
+    background-color: #42535a;
+    transform: translateY(2px);
+}
+
+.option-button:hover {
+    background-color: #627e8a;
+}
+
+.action-button {
+    background-color: rgb(76, 107, 93);
+    color: aliceblue;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.action-button:active {
+    background-color: rgb(57, 80, 70);
+    transform: translateY(2px);
+}
+
+.action-button:hover {
+    background-color: rgb(94, 131, 114);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.exam-list-container {
+    text-align: center;
+}
+
+table {
+    color: aliceblue;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px 40px 5px 5px;
+    border-color: #627e8a;
+}
+
+td {
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #627e8a49;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+tr:not(:first-child):hover {
+    background-color: rgba(50, 59, 61, 0.521);
+}
+
+.exam-visualizer {
+    box-shadow: 0 4px 8px 0 rgba(129, 129, 129, 0.2);
+    border-radius: 5px;
+    border-color: dimgrey;
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    background-color: rgb(32, 32, 32);
+    width: 250px;
+    padding: 10px 50px;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    top: 30%;
+}
+
+.open-visualizer-popup{
+    display: block;
+}
+
+li {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.ex-header{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+ol li {
+    margin: 0 0 0 -10px;
+}

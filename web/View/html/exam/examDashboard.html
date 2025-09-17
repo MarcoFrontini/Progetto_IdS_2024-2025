@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Esami</title>
+  <link rel="stylesheet" href="../../css/examDashboardPage.css" />
+  <script defer src="../../js/examDashboard.js"></script>
+</head>
+
+<body>
+  <h2>Lista Esami</h2>
+
+  <div class="button-container">
+    <form action="../startingPanel.html">
+      <button type="submit" class="option-button">Indietro</button>
+    </form>
+    <form action="./examEditor.html">
+      <button type="submit" class="option-button">Crea Esame</button>
+    </form>
+  </div>
+
+  <div class="exam-list-container">
+    <div class="card">
+      <table class="exam-table-list" id="exam-table-list">
+        <tr>
+          <th>Nome Esame</th>
+          <th>Azioni</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!--  SEPARATOR  -->
+  <div class="exam-visualizer" id="exam-visualizer">
+    
+    <p class="exam-title" id="exam-title">Exam Title</p>
+    <div class="sections-container">      
+      <ul class="section-list" id="section-list"></ul>
+    </div>
+    <div><button class="action-button" type="submit" onclick="closeVisualizer()">Chiudi</button></div>
+  </div>
+
+</body>
+
+
+</html>

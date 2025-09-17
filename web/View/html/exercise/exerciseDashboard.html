@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Esercizi</title>
+  <link rel="stylesheet" href="../../css/exerciseDashboardPage.css" />
+  <script defer src="../../js/exerciseDashboard.js"></script>
+</head>
+
+<body>
+  <h2>Lista Esercizi</h2>
+
+  <div class="button-container">
+    <form action="../startingPanel.html">
+      <button type="submit" class="option-button">Indietro</button>
+    </form>
+    <button type="submit" class="option-button" onclick="openTypeSelector()" type="submit">Crea Esercizio</button>
+  </div>
+
+  <div class="exercise-list-container">
+    <div class="card">
+      <table class="exercise-list-table" id="exercise-list-table">
+        <tr>
+          <th class="hidden-row">ID</th>
+          <th>Domanda</th>
+          <th>Tipo Esercizio</th>
+          <th>Punteggio</th>
+          <th>Azioni</th>
+        </tr>
+
+        <!--<tr>
+          <td class="hidden-row">ExM_1</td>
+          <td>Domanda esercizio</td>
+          <td>Tipo Esercizio</td>
+          <td>Punteggio</td>
+          <td>
+            <button class="action-button" type="submit" onclick="openExerciseVisualizer('ExM_1')">Visualizza</button>
+            <button class="action-button" onclick="deleteExercise('ExM_1')">Elimina</button>
+            <button class="action-button" onclick="">Modifica</button>
+          </td>
+        </tr>-->
+      </table>
+
+    </div>
+  </div>
+
+  <div class="popup-exercise-type-selector" id="popup-exercise-type-selector">
+    <button class="popup-action-button" id="popup-action-button" type="submit"
+      onclick="openTemplateCreator('multiple', '')">Domanda
+      a risposta multipla</button>
+    <button class="popup-action-button" id="popup-action-button" type="submit"
+      onclick="openTemplateCreator('single', '')">Domanda
+      a risposta aperta</button>
+    <button class="popup-action-button" type="submit" onclick="closeTypeSelectorPopup()">Annulla</button>
+  </div>
+
+  <div class="popup-exer-visualizer" id="popup-exer-visualizer">
+    <h3>Visualizzazione Esercizio</h3>
+
+    <div class="exercise-visualizer-container-single" id="exercise-visualizer-container-single">
+      <table class="exercise-data-container" id="exercise-single-visualizer-table">
+        <tr>
+          <th class="hidden-row">ID</th>
+          <th>Domanda</th>
+          <th>Tipo esecizio</th>
+          <th>Punteggio</th>
+        </tr>
+        <tr>
+          <td class="ex-uuid_S hidden-row" id="ex-uuid_S">ExS_1</td>
+          <td class="ex-type-s"> Tipo</td>
+          <td class="ex-question-s">Ipotetica doomanda dell'esercizio</td>
+          <td class="ex-points-s">3</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="exercise-visualizer-container-multiple" id="exercise-visualizer-container-multiple">
+      <table class="exercise-data-container" id="exercise-multiple-visualizer-table">
+        <tr>
+          <th class="hidden-row">ID</th>
+          <th>Domanda</th>
+          <th>Tipo esecizio</th>
+          <th>Punteggio</th>
+          <th>Risposta 1</th>
+          <th>Risposta 2</th>
+          <th>Risposta 3</th>
+          <th>Risposta 4</th>
+        </tr>
+        <tr>
+          <td class="ex-uuid_M hidden-row" id="ex-uuid_M">ExM_1</td>
+          <td>Risposta Multipla</td>
+          <td>Ipotetica doomanda dell'esercizio</td>
+          <td>5</td>
+          <td>Ris 1</td>
+          <td>Ris 2</td>
+          <td>Ris 3</td>
+          <td>Ris 4</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="popup-button-container" id="visualizer-options">
+
+      <!-- Button here -->
+    </div>
+  </div>
+
+  <div class="popup-exercise-template-container" id="popup-exercise-template-container">
+    <div class="exercise-single-template" id="exercise-single-template">
+      <table class="exercise-data-container-single" id="exercise-data-container-single">
+        <tr>
+          <th class="hidden-row">ID</th>
+          <th>Domanda</th>
+          <th>Tipo esecizio</th>
+          <th>Punteggio</th>
+        </tr>
+        <tr>
+          <td class="ex-uuid_S_" id="ex-uuid_S_">ExS___</td>
+          <td><input type="text" placeholder="Domanda dell'esercizio" id="question_single" name="question_single"
+              required></td>
+          <td id="ex_type_single">Risposta Aperta</td>
+          <td><input type="number" placeholder="Punteggio dell'esercizio" id="points_single" name="points_single"
+              required></td>
+        </tr>
+        </tr>
+      </table>
+    </div>
+
+    <div class="exercise-multiple-template" id="exercise-multiple-template">
+      <table class="exercise-data-container-multiple" id="exercise-data-container-multiple">
+        <tr>
+          <th class="hidden-row">ID</th>
+          <th>Domanda</th>
+          <th>Tipo esecizio</th>
+          <th>Punteggio</th>
+          <th>Risposta 1</th>
+          <th>Risposta 2</th>
+          <th>Risposta 3</th>
+          <th>Risposta 4</th>
+        </tr>
+        <tr>
+          <td class="ex-uuid_M_" id="ex-uuid_M_">ExM____</td>
+          <td><input type="text" placeholder="Domanda dell'esercizio" id="question_multiple" name="question_multiple"
+              required></td>
+          <td id="ex_type_multiple">Risposta Multipla</td>
+          <td><input type="number" placeholder="Punteggio dell'esercizio" id="points_multiple" name="points_multiple"
+              required></td>
+          <td><input type="text" placeholder="Risposta 1" id="answ_1_multiple" name="answ_1" required></td>
+          <td><input type="text" placeholder="Risposta 1" id="answ_2_multiple" name="answ_2" required></td>
+          <td><input type="text" placeholder="Risposta 1" id="answ_3_multiple" name="answ_3" required></td>
+          <td><input type="text" placeholder="Risposta 1" id="answ_4_multiple" name="answ_4" required></td>
+        </tr>
+      </table>
+    </div>
+
+    <p class="template_ex_uuid" id="template_ex_uuid">val</p>
+    <div class="popup-button-container" id="edit-mode-buttons">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
