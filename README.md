@@ -27,6 +27,7 @@ terminale;
 il comando docker-compose down per interrompere l'esecuzione ed eliminare anche i
 container. Se desideri rimuovere anche i volumi del database, usa il comando docker-
 compose down -v.
+
 Questa sequenza di istruzioni permetterà di avviare correttamente il progetto in locale su qualsiasi
 Sistema Operativo.
 
